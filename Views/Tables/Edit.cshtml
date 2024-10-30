@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Vertical Form - Form Layouts";
+}
+
+@model TicketModel
+
+<div class="container mt-5">
+    <div class="card shadow-lg p-5 rounded-lg border-0">
+        <h3 class="text-center text-primary mb-4"><i class="fas fa-ticket-alt me-2"></i> Edit Tickets</h3>
+        <hr class="mb-4">
+
+        <form method="post" asp-action="Edit" asp-controller="Tables">
+            <!-- Ticket Details Section -->
+            <input type="hidden" asp-for="TicketId" />
+
+            <div class="mt-4">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <label asp-for="TicketName" class="form-label font-weight-bold"></label>
+                        <input type="text" asp-for="TicketName" class="form-control rounded-pill border-primary shadow-sm" id="ticketName" placeholder="Enter ticket name">
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <label asp-for="TicketAmount" class="form-label font-weight-bold"></label>
+                        <input asp-for="TicketAmount" type="number" class="form-control rounded-pill border-primary shadow-sm" id="amount" placeholder="Enter amount">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-4">
+                        <label asp-for="TicketDescription" class="form-label font-weight-bold"></label>
+                        <textarea class="form-control rounded border-primary shadow-sm" id="description" placeholder="Provide a description" asp-for="TicketDescription" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center mt-5">
+                    <button type="submit" class="btn btn-primary px-5 py-2 rounded-pill shadow-sm">
+                        <i class="fas fa-paper-plane me-2"></i> Submit
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
