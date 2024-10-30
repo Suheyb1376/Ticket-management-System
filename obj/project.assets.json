@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hp\\Desktop\\New folder\\sneat-bootstrap-html-aspnet-core-mvc-admin-template-free-main\\AspnetCoreMvcFull.csproj",
+      "projectUniqueName": "C:\\Users\\hp\\Desktop\\New folder\\New folder\\Ticket-management-System\\AspnetCoreMvcFull.csproj",
       "projectName": "AspnetCoreMvcFull",
-      "projectPath": "C:\\Users\\hp\\Desktop\\New folder\\sneat-bootstrap-html-aspnet-core-mvc-admin-template-free-main\\AspnetCoreMvcFull.csproj",
+      "projectPath": "C:\\Users\\hp\\Desktop\\New folder\\New folder\\Ticket-management-System\\AspnetCoreMvcFull.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hp\\Desktop\\New folder\\sneat-bootstrap-html-aspnet-core-mvc-admin-template-free-main\\obj\\",
+      "outputPath": "C:\\Users\\hp\\Desktop\\New folder\\New folder\\Ticket-management-System\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
