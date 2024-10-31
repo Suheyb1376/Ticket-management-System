@@ -10,5 +10,6 @@ namespace AspnetCoreMvcFull.Data
         {
         }
         public DbSet<Tickets> Tickets { get; set; }
+        public DbSet <CustomerType> customerTypes { get; set; }
     }
 }

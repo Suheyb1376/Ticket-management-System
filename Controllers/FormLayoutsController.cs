@@ -11,13 +11,37 @@ public class FormLayoutsController : Controller
 {
 
     private readonly ApplicationContext _context;
-
+    
     public FormLayoutsController( ApplicationContext context)
     {
         _context = context;
     }
-    public IActionResult Horizontal() => View();
+    public IActionResult CustomerType() => View();
+
+    [HttpPost]
+    public async Task<IActionResult> CustomerType(CutomerTypeModel model)
+    {
+
+        var NewType = new CustomerType()
+        {
+            Customtype = model.Customtype,
+            CustomDescription = model.CustomDescription,
+        };
+        if (ModelState.IsValid)
+        {
+            _context.Add(NewType);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index", "Home");
+        }
+
+
+
+        return View(model);
+
+    }
+
     public IActionResult Ticket() => View();
+
 
 
     [HttpPost]
