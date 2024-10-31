@@ -170,12 +170,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGVzXEJhc2ljLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/hp/Desktop/New folder/New folder/Ticket-management-System/Views/Tables/CusType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGVzXEN1c1R5cGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/hp/Desktop/New folder/New folder/Ticket-management-System/Views/Tables/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/hp/Desktop/New folder/New folder/Ticket-management-System/Views/Tables/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hp/Desktop/New folder/New folder/Ticket-management-System/Views/Tables/EditCustom.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFibGVzXEVkaXRDdXN0b20uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/hp/Desktop/New folder/New folder/Ticket-management-System/Views/Ui/Accordion.cshtml]

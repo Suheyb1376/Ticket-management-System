@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Basic Tables - Tables";
+}
+
+@* * Content * *@
+<!-- Basic Bootstrap Table -->
+@model IEnumerable<CustomerType>
+
+<div class="card">
+    <h5 class="card-header d-flex justify-content-between align-items-center">
+        Ticket List
+        <a asp-controller="FormLayouts" asp-action="CustomerType" class="btn btn-primary px-4">Add New Customer Type</a>
+    </h5>
+    <div class="table-responsive text-nowrap">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Customer Type</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody class="table-border-bottom-0">
+                @foreach (var custype in Model)
+                {
+                    <tr>
+                        <td>@custype.Customtype</td>
+                        <td>@custype.CustomDescription</td>
+                        <td>
+                            <a asp-controller="Tables" asp-action="EditCustom" asp-route-id="@custype.CustomerId" class="btn btn-warning btn-sm">Edit</a>
+                            <a asp-controller="Tables" asp-action="DeleteCustom" asp-route-id="@custype.CustomerId" class="btn btn-danger btn-sm">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<!--/ Basic Bootstrap Table -->

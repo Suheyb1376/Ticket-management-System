@@ -31,7 +31,7 @@ public class FormLayoutsController : Controller
         {
             _context.Add(NewType);
             await _context.SaveChangesAsync();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Basic", "FormLayouts");
         }
 
 
@@ -54,7 +54,7 @@ public class FormLayoutsController : Controller
         {
             _context.Add(NewTicket);
             await _context.SaveChangesAsync();
-            return RedirectToAction("Index" ,"Home");
+            return RedirectToAction("Basic", "Tables");
         }
         return View();
     }

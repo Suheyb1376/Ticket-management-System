@@ -22,6 +22,68 @@ public class TablesController : Controller
     }
 
 
+    public async Task<IActionResult> CusType()
+    {
+        var CustomTyp = await _context.customerTypes.ToListAsync();
+        return View(CustomTyp);
+    }
+
+
+    public async Task<IActionResult> EditCustom(int id)
+    {
+        var CustomTyp = await _context.customerTypes.FindAsync(id);
+        if (CustomTyp == null)
+        {
+            return NotFound();
+        }
+
+        // Subject entity to SubjectView
+        var CustomeTy = new CutomerTypeModel
+        {
+            CustomerId = CustomTyp.CustomerId,
+            Customtype = CustomTyp.Customtype,
+            CustomDescription = CustomTyp.CustomDescription,
+            
+
+
+        };
+
+        return View(CustomeTy);
+    }
+
+
+
+
+
+    [HttpPost]
+    [AutoValidateAntiforgeryToken]
+    public async Task<IActionResult> EditCustom(CutomerTypeModel model)
+    {
+        if (!ModelState.IsValid)
+        {
+            return View(model); // Return view with validation errors
+        }
+
+        // Retrieve the existing subject from the database
+        var existingSubject = await _context.customerTypes.FindAsync(model.CustomerId);
+        if (existingSubject == null)
+        {
+            return NotFound();
+        }
+
+        // Update properties
+        existingSubject.CustomerId = model.CustomerId;
+        existingSubject.Customtype = model.Customtype;
+        existingSubject.CustomDescription = model.CustomDescription;
+        // Save changes to the database
+        _context.Update(existingSubject);
+        await _context.SaveChangesAsync();
+
+        return RedirectToAction("Index", "Home");
+    }
+
+
+
     //Editing Method
 
     public async Task<IActionResult> Edit(int id)
